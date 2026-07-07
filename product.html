@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product — AudioTech</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <a href="index.html" class="header-image"
+        ><img
+          src="./images/header-logo.png"
+          alt="AudioTech"
+          class="header-logo"
+      /></a>
+      <button
+        class="burger-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span class="burger-button-line"></span>
+        <span class="burger-button-line"></span>
+        <span class="burger-button-line"></span>
+      </button>
+      <nav class="navbar" id="site-navigation">
+        <ul class="navbar-list">
+          <li class="nav-link_item">
+            <a href="index.html#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-link_item">
+            <a href="index.html#products" class="nav-link">Products</a>
+          </li>
+          <li class="nav-link_item">
+            <a href="index.html#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-link_item">
+            <a href="index.html#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="cart-button" type="button" aria-label="Open shopping cart">
+        <svg
+          class="cart-icon"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="8" cy="21" r="1"></circle>
+          <circle cx="19" cy="21" r="1"></circle>
+          <path
+            d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+          ></path>
+        </svg>
+        <span class="cart-badge">0</span>
+      </button>
+    </header>
+    <main class="main container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator" aria-hidden="true">/</span>
+        <a href="index.html#products" class="breadcrumb-link">Products</a>
+        <span class="breadcrumb-separator" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" id="breadcrumb-product">Product</span>
+      </nav>
+      <div id="product-detail" class="product-detail">
+        <p class="product-loading">Loading product...</p>
+      </div>
+    </main>
+    <footer class="footer container" id="contact">
+      <div class="footer-inner-content">
+        <div class="footer-left">
+          <img
+            src="./images/header-logo.png"
+            class="header-logo"
+            alt="footer-logo"
+          />
+          <h4 class="footer-left-title title">AudioTech Store</h4>
+          <p class="footer-left-desс">We present only high-quality headsets.</p>
+        </div>
+        <div class="footer-center">
+          <h3 class="footer-title-center title">Navigation</h3>
+          <nav class="footer-list">
+            <ul class="footer-nav-list">
+              <li class="footer-item">
+                <a class="footer-item-link" href="index.html#home">Home</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="index.html#products"
+                  >Product</a
+                >
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="index.html#about">About</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="index.html#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-right">
+          <h4 class="footer-right title">Contact</h4>
+          <label class="footer-email">
+            <input
+              class="footer-email-input input"
+              type="email"
+              placeholder="Email"
+            />
+          </label>
+          <label class="footer-number">
+            <input
+              class="footer-number-input input"
+              type="number"
+              placeholder="+1 2312 1231"
+            />
+          </label>
+          <button
+            class="footer-subscribe-button button"
+            type="submit"
+            title="Subscribe"
+          >
+            <span class="visually-hidden">Send</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="product.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
