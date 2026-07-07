@@ -1,3 +1,40 @@
+// Render product catalog on the home page (before animations are set up)
+const productGrid = document.getElementById("product-grid");
+if (productGrid && window.PRODUCTS) {
+  productGrid.innerHTML = window.PRODUCTS.map(
+    (product) => `
+      <div class="product-item">
+        <a href="product.html?id=${product.id}" class="product-link">
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="product-image"
+            width="375"
+          />
+        </a>
+        <div class="product-desc">
+          <h3 class="product-name">
+            <a href="product.html?id=${product.id}" class="product-name-link">${product.name}</a>
+          </h3>
+          <span class="product-price">${window.formatPrice(product.price)}</span>
+          <div class="product-card-actions">
+            <a href="product.html?id=${product.id}" class="product-button">View</a>
+            <button class="product-button product-add-button" type="button" data-id="${product.id}">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    `
+  ).join("");
+
+  productGrid.querySelectorAll(".product-add-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      window.Cart.add(Number(button.dataset.id), 1);
+    });
+  });
+}
+
 const burgerButton = document.querySelector(".burger-button");
 const body = document.body;
 const navLinks = document.querySelectorAll(".navbar .nav-link");
